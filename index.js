@@ -46,18 +46,18 @@ window.onload = async () => {
   //   });
   //
   // 複数のクエリを用いた取得（絞り込み、並び替え、ページ）
-  const snapShot = await firestore
-    .collection("todos")
-    .where("status", "==", 4)
-    .orderBy("task")
-    .startAt("hoge")
-    .startAt(doc)
-    .limit(3)
-    .get();
-  const todos = snapShot.docs.map((doc) => ({
-    id: doc.id,
-    status: doc.data().status,
-    task: doc.data().task,
-  }));
-  console.log(todos);
+  // const snapShot = await firestore
+  //   .collection("todos")
+  //   .where("status", "==", 4)
+  //   .orderBy("task")
+  //   .startAt("hoge")
+  //   .startAt(doc)
+  //   .limit(3)
+  //   .get();
+  // const todos = snapShot.docs.map((doc) => ({
+  //   id: doc.id,
+  //   status: doc.data().status,
+  //   task: doc.data().task,
+  // }));
+  // console.log(todos);
 };
